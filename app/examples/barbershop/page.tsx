@@ -143,6 +143,7 @@ export default function BarbershopPremium() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             variants={fadeInUp as any}
             className="text-center mb-20"
           >
@@ -256,6 +257,7 @@ export default function BarbershopPremium() {
                 style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-500 z-10" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={src} className="w-full h-full object-cover" alt="Barber work" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-end p-8">
                   <span className="text-[#d4a843] font-black text-xl tracking-wider">Premium Fade</span>
