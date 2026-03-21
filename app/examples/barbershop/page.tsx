@@ -68,9 +68,13 @@ export default function BarbershopPremium() {
         <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent z-10" />
-          <div 
-            className="absolute inset-0 bg-cover bg-center object-cover scale-110"
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1585747860111-b0e2d3bb073f?q=80&w=2000&auto=format&fit=crop")' }}
+          <video 
+            src="/hero-edited.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="absolute inset-0 w-full h-full object-cover scale-110"
           />
         </motion.div>
 
