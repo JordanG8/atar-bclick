@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --blue-primary: #1e3a8a;
+  --blue-dark: #0f1e4a;
+  --gold: #d4a843;
+  --gold-light: #f0c866;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-heebo), 'Heebo', Arial, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #0f1e4a 0%, #1e3a8a 50%, #1e40af 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #d4a843 0%, #f0c866 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #d4a843, #f0c866);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  }
+}

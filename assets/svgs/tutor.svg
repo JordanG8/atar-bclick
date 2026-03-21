@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F0F7FF"/>
+
+  <!-- Classroom/study background -->
+  <rect x="0" y="0" width="800" height="600" fill="#EAF2FF"/>
+
+  <!-- Chalkboard -->
+  <rect x="60" y="50" width="520" height="300" rx="8" fill="#2D5016"/>
+  <rect x="70" y="60" width="500" height="280" rx="4" fill="#3A6B1E"/>
+  <!-- Chalkboard tray -->
+  <rect x="60" y="348" width="520" height="14" rx="3" fill="#8B6914"/>
+  <!-- Chalk pieces on tray -->
+  <rect x="80" y="351" width="30" height="8" rx="3" fill="#FFFFF0"/>
+  <rect x="118" y="352" width="22" height="7" rx="3" fill="#FFCDD2"/>
+  <rect x="148" y="351" width="26" height="8" rx="3" fill="#BBDEFB"/>
+
+  <!-- Math on chalkboard -->
+  <!-- Title -->
+  <text x="320" y="100" textAnchor="middle" fontFamily="serif" fontSize="20" fill="#FFFFFF" opacity="0.9">מתמטיקה - פונקציות</text>
+  <!-- Equation 1 -->
+  <text x="150" y="145" fontFamily="monospace" fontSize="16" fill="#FFFFAA">f(x) = x² + 3x - 4</text>
+  <!-- Equation 2 -->
+  <text x="150" y="180" fontFamily="monospace" fontSize="16" fill="#FFFFAA">= (x + 4)(x - 1)</text>
+  <!-- Underline -->
+  <line x1="150" y1="185" x2="400" y2="185" stroke="#FFFFAA" strokeWidth="1.5" strokeDasharray="4 2"/>
+
+  <!-- Coordinate system drawn on board -->
+  <line x1="390" y1="140" x2="555" y2="140" stroke="#FFFFFF" strokeWidth="2" opacity="0.6"/>
+  <line x1="472" y1="100" x2="472" y2="290" stroke="#FFFFFF" strokeWidth="2" opacity="0.6"/>
+  <!-- Axis arrows -->
+  <polygon points="555,140 548,136 548,144" fill="#FFFFFF" opacity="0.6"/>
+  <polygon points="472,100 468,107 476,107" fill="#FFFFFF" opacity="0.6"/>
+  <!-- Parabola curve -->
+  <path d="M400 275 Q430 200 472 165 Q514 200 545 275" stroke="#FFD700" strokeWidth="2.5" fill="none"/>
+  <!-- Points on curve -->
+  <circle cx="430" cy="215" r="4" fill="#E63946"/>
+  <circle cx="472" cy="165" r="5" fill="#E63946"/>
+  <circle cx="514" cy="215" r="4" fill="#E63946"/>
+  <!-- Axis labels -->
+  <text x="558" y="145" fontFamily="monospace" fontSize="12" fill="#FFFFFF" opacity="0.7">x</text>
+  <text x="476" y="96" fontFamily="monospace" fontSize="12" fill="#FFFFFF" opacity="0.7">y</text>
+
+  <!-- Third area: steps -->
+  <text x="100" y="225" fontFamily="serif" fontSize="14" fill="#AAFFAA">שלב 1: מצא את שורשי הפונקציה</text>
+  <text x="100" y="250" fontFamily="monospace" fontSize="13" fill="#FFFFFF">x₁ = -4, x₂ = 1</text>
+  <text x="100" y="278" fontFamily="serif" fontSize="14" fill="#AAFFAA">שלב 2: קודקוד הפרבולה</text>
+  <text x="100" y="302" fontFamily="monospace" fontSize="13" fill="#FFFFFF">x = -3/2 = -1.5</text>
+
+  <!-- Pointer stick pointing to board -->
+  <line x1="600" y1="390" x2="480" y2="245" stroke="#8B6914" strokeWidth="5" strokeLinecap="round"/>
+  <circle cx="478" cy="243" r="5" fill="#5D3A1A"/>
+
+  <!-- Tutor (Dr. Math) figure -->
+  <circle cx="660" cy="230" r="38" fill="#D4A574"/>
+  <!-- Hair/beard (professor look) -->
+  <path d="M624 218 Q628 185 660 182 Q692 185 696 218" fill="#888888"/>
+  <!-- Glasses (professor) -->
+  <circle cx="645" cy="224" r="13" fill="none" stroke="#5C3D1E" strokeWidth="2.5"/>
+  <circle cx="675" cy="224" r="13" fill="none" stroke="#5C3D1E" strokeWidth="2.5"/>
+  <line x1="658" y1="224" x2="662" y2="224" stroke="#5C3D1E" strokeWidth="2"/>
+  <line x1="632" y1="224" x2="626" y2="222" stroke="#5C3D1E" strokeWidth="2"/>
+  <line x1="688" y1="224" x2="694" y2="222" stroke="#5C3D1E" strokeWidth="2"/>
+  <!-- Light beard -->
+  <path d="M628 240 Q640 255 660 258 Q680 255 692 240 Q685 248 660 252 Q635 248 628 240Z" fill="#BBBBBB" opacity="0.5"/>
+  <!-- Professor robe/jacket -->
+  <rect x="628" y="268" width="64" height="100" rx="6" fill="#2C3E50"/>
+  <!-- Gown/robe -->
+  <path d="M622 280 L630 268 L660 280 L690 268 L698 280 L710 380 L610 380 Z" fill="#1A1A2E"/>
+  <!-- White shirt collar -->
+  <path d="M648 268 L660 285 L672 268 Q660 264 648 268Z" fill="#FFFFFF"/>
+  <!-- Doctoral hood (orange) -->
+  <path d="M622 270 Q640 260 660 265 Q680 260 698 270 Q690 290 660 295 Q630 290 622 270Z" fill="#E67E22" opacity="0.7"/>
+  <!-- Arms -->
+  <!-- Arm holding pointer stick -->
+  <path d="M698 300 Q730 320 660 390" stroke="#2C3E50" strokeWidth="22" strokeLinecap="round"/>
+  <!-- Other arm with book -->
+  <path d="M622 310 Q590 320 580 340" stroke="#2C3E50" strokeWidth="20" strokeLinecap="round"/>
+  <!-- Book -->
+  <rect x="540" y="330" width="55" height="70" rx="4" fill="#E74C3C"/>
+  <rect x="545" y="335" width="45" height="60" rx="2" fill="#C0392B"/>
+  <line x1="555" y1="345" x2="582" y2="345" stroke="#FFFFFF" strokeWidth="1" opacity="0.5"/>
+  <line x1="555" y1="353" x2="582" y2="353" stroke="#FFFFFF" strokeWidth="1" opacity="0.5"/>
+  <text x="567" y="375" textAnchor="middle" fontFamily="serif" fontSize="8" fill="#FFFFFF">מתמטיקה</text>
+  <!-- Leg area -->
+  <rect x="640" y="375" width="25" height="90" rx="5" fill="#1A1A2E"/>
+  <rect x="670" y="375" width="25" height="90" rx="5" fill="#1A1A2E"/>
+  <!-- Shoes -->
+  <rect x="633" y="458" width="38" height="15" rx="5" fill="#1A1A1A"/>
+  <rect x="663" y="458" width="38" height="15" rx="5" fill="#1A1A1A"/>
+
+  <!-- Student desk (lower right) -->
+  <rect x="30" y="400" width="180" height="140" rx="6" fill="#D4A96E"/>
+  <rect x="30" y="395" width="180" height="12" rx="4" fill="#E8C090"/>
+  <!-- Student figure (small, at desk) -->
+  <circle cx="120" cy="375" r="22" fill="#F0C090"/>
+  <path d="M100 370 Q108 350 120 348 Q132 350 140 370" fill="#3D2B1A"/>
+  <!-- Hunched over notebook -->
+  <path d="M95 397 Q120 405 145 397 L148 440 L92 440 Z" fill="#4A90D9"/>
+  <!-- Notebook on desk -->
+  <rect x="50" y="408" width="100" height="70" rx="3" fill="#FFFFFF" stroke="#DDDDDD" strokeWidth="1"/>
+  <line x1="60" y1="422" x2="140" y2="422" stroke="#AAAAAA" strokeWidth="1"/>
+  <line x1="60" y1="432" x2="140" y2="432" stroke="#AAAAAA" strokeWidth="1"/>
+  <line x1="60" y1="442" x2="140" y2="442" stroke="#AAAAAA" strokeWidth="1"/>
+  <line x1="60" y1="452" x2="130" y2="452" stroke="#AAAAAA" strokeWidth="1"/>
+  <text x="70" y="420" fontFamily="monospace" fontSize="8" fill="#333333">x² + 3x = 4</text>
+  <!-- Pencil -->
+  <rect x="148" y="405" width="6" height="65" rx="3" fill="#FFD700" transform="rotate(15 148 405)"/>
+  <path d="M150 468 L152 475 L156 465 Z" fill="#F5C5A3" transform="rotate(15 148 405)"/>
+
+  <!-- "A+" grade stamp effect -->
+  <circle cx="195" cy="430" r="25" fill="none" stroke="#E63946" strokeWidth="2.5" opacity="0.7"/>
+  <text x="195" y="437" textAnchor="middle" fontFamily="serif" fontSize="18" fontWeight="bold" fill="#E63946" opacity="0.8">A+</text>
+
+  <!-- Dr. Math sign -->
+  <rect x="600" y="450" width="180" height="70" rx="8" fill="#2C3E50"/>
+  <text x="690" y="478" textAnchor="middle" fontFamily="serif" fontSize="16" fill="#FFD700">ד״ר מתמטיקה</text>
+  <text x="690" y="500" textAnchor="middle" fontFamily="sans-serif" fontSize="10" fill="#AAAAAA">שיעורים פרטיים | כל הגילאים</text>
+
+  <!-- Floating math symbols -->
+  <text x="32" y="195" fontFamily="serif" fontSize="32" fill="#2196F3" opacity="0.2">∫</text>
+  <text x="738" y="420" fontFamily="serif" fontSize="28" fill="#E63946" opacity="0.2">π</text>
+  <text x="750" y="200" fontFamily="serif" fontSize="24" fill="#4CAF50" opacity="0.2">Σ</text>
+  <text x="38" y="420" fontFamily="serif" fontSize="26" fill="#9C27B0" opacity="0.15">∞</text>
+</svg>

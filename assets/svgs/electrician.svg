@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1E293B"/>
+
+  <!-- Blueprint grid background -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A3F5F" strokeWidth="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Main electrical panel/breaker box -->
+  <rect x="500" y="80" width="240" height="380" rx="8" fill="#2C3E50"/>
+  <rect x="508" y="88" width="224" height="364" rx="4" fill="#34495E"/>
+  <!-- Panel label -->
+  <rect x="515" y="95" width="210" height="35" rx="3" fill="#2C3E50"/>
+  <text x="620" y="118" textAnchor="middle" fontFamily="monospace" fontSize="12" fill="#F39C12">ELECTRICAL PANEL</text>
+  <!-- Breakers -->
+  <rect x="520" y="140" width="90" height="20" rx="3" fill="#E74C3C"/>
+  <rect x="622" y="140" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="520" y="168" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="622" y="168" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="520" y="196" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="622" y="196" width="90" height="20" rx="3" fill="#3498DB"/>
+  <rect x="520" y="224" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="622" y="224" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="520" y="252" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="622" y="252" width="90" height="20" rx="3" fill="#E74C3C"/>
+  <rect x="520" y="280" width="90" height="20" rx="3" fill="#27AE60"/>
+  <rect x="622" y="280" width="90" height="20" rx="3" fill="#27AE60"/>
+  <!-- Main breaker -->
+  <rect x="540" y="315" width="130" height="35" rx="4" fill="#E74C3C"/>
+  <text x="605" y="338" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#FFFFFF">MAIN 100A</text>
+  <!-- Status lights -->
+  <circle cx="535" cy="150" r="4" fill="#00FF00"/>
+  <circle cx="535" cy="178" r="4" fill="#00FF00"/>
+  <circle cx="535" cy="206" r="4" fill="#00FF00"/>
+  <circle cx="535" cy="234" r="4" fill="#00FF00"/>
+  <circle cx="535" cy="262" r="4" fill="#FF4444"/>
+  <circle cx="535" cy="290" r="4" fill="#00FF00"/>
+
+  <!-- Wiring diagram on wall -->
+  <rect x="30" y="60" width="420" height="280" rx="6" fill="#0D1B2A" stroke="#1E4080" strokeWidth="2"/>
+  <!-- Circuit lines -->
+  <line x1="60" y1="120" x2="380" y2="120" stroke="#F39C12" strokeWidth="2"/>
+  <line x1="60" y1="160" x2="380" y2="160" stroke="#3498DB" strokeWidth="2"/>
+  <line x1="60" y1="200" x2="380" y2="200" stroke="#E74C3C" strokeWidth="2"/>
+  <line x1="200" y1="120" x2="200" y2="200" stroke="#F39C12" strokeWidth="1.5" strokeDasharray="5 3"/>
+  <line x1="280" y1="160" x2="280" y2="280" stroke="#3498DB" strokeWidth="1.5" strokeDasharray="5 3"/>
+  <!-- Outlet symbols -->
+  <circle cx="150" cy="120" r="12" fill="none" stroke="#F39C12" strokeWidth="2"/>
+  <line x1="147" y1="117" x2="147" y2="123" stroke="#F39C12" strokeWidth="2"/>
+  <line x1="153" y1="117" x2="153" y2="123" stroke="#F39C12" strokeWidth="2"/>
+  <circle cx="320" cy="160" r="12" fill="none" stroke="#3498DB" strokeWidth="2"/>
+  <line x1="317" y1="157" x2="317" y2="163" stroke="#3498DB" strokeWidth="2"/>
+  <line x1="323" y1="157" x2="323" y2="163" stroke="#3498DB" strokeWidth="2"/>
+  <!-- Light switch symbols -->
+  <rect x="245" y="185" width="30" height="30" rx="3" fill="none" stroke="#E74C3C" strokeWidth="2"/>
+  <line x1="255" y1="200" x2="265" y2="195" stroke="#E74C3C" strokeWidth="2"/>
+  <!-- Diagram label -->
+  <text x="220" y="90" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#4A90D9">WIRING DIAGRAM - APARTMENT 4B</text>
+
+  <!-- Electrician worker -->
+  <!-- Hard hat -->
+  <path d="M260 340 Q260 310 290 305 Q320 300 340 310 Q365 318 360 340 Z" fill="#F39C12"/>
+  <rect x="255" y="338" width="115" height="8" rx="4" fill="#D68910"/>
+  <!-- Head/face -->
+  <circle cx="308" cy="355" r="30" fill="#D4956A"/>
+  <!-- Safety glasses -->
+  <rect x="290" y="349" rx="4" width="36" height="14" fill="#AED6F1" opacity="0.7"/>
+  <rect x="288" y="351" width="4" height="10" fill="#555555"/>
+  <rect x="328" y="351" width="4" height="10" fill="#555555"/>
+  <!-- Work shirt (hi-vis) -->
+  <rect x="275" y="385" width="66" height="90" rx="6" fill="#F39C12"/>
+  <!-- Reflective strips -->
+  <rect x="275" y="400" width="66" height="6" rx="2" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="275" y="430" width="66" height="6" rx="2" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Safety vest overlay -->
+  <path d="M275 390 L285 385 L300 410 L315 395 L322 395 L338 410 L355 385 L341 390 L341 420 L275 420 Z" fill="#E67E22" opacity="0.5"/>
+  <!-- Work pants -->
+  <rect x="278" y="472" width="28" height="80" rx="5" fill="#2C3E50"/>
+  <rect x="310" y="472" width="28" height="80" rx="5" fill="#2C3E50"/>
+  <!-- Boots -->
+  <rect x="272" y="545" width="40" height="18" rx="5" fill="#5D4037"/>
+  <rect x="304" y="545" width="40" height="18" rx="5" fill="#5D4037"/>
+  <!-- Arm with screwdriver -->
+  <path d="M275 400 Q240 390 210 370" stroke="#F39C12" strokeWidth="18" strokeLinecap="round"/>
+  <!-- Screwdriver -->
+  <rect x="185" y="362" width="30" height="6" rx="3" fill="#FFD700"/>
+  <rect x="165" y="364" width="22" height="4" rx="1" fill="#888888"/>
+  <path d="M162 364 L160 366 L162 368 L165 368 L165 364 Z" fill="#CCCCCC"/>
+
+  <!-- Tool belt -->
+  <rect x="272" y="468" width="72" height="10" rx="3" fill="#8B6914"/>
+  <!-- Tools hanging from belt -->
+  <rect x="280" y="478" width="8" height="20" rx="2" fill="#888888"/>
+  <rect x="294" y="478" width="6" height="18" rx="2" fill="#FFD700"/>
+  <rect x="306" y="476" width="10" height="25" rx="2" fill="#E74C3C"/>
+  <rect x="322" y="478" width="8" height="20" rx="2" fill="#888888"/>
+
+  <!-- Lightning bolt / electric symbol -->
+  <path d="M430 400 L410 450 L425 450 L405 510 L445 445 L428 445 Z" fill="#F39C12"/>
+  <path d="M430 400 L410 450 L425 450 L405 510 L445 445 L428 445 Z" fill="none" stroke="#FFD700" strokeWidth="2"/>
+
+  <!-- Company name -->
+  <rect x="30" y="380" width="200" height="60" rx="8" fill="#F39C12" opacity="0.15"/>
+  <text x="130" y="408" textAnchor="middle" fontFamily="sans-serif" fontSize="15" fontWeight="bold" fill="#F39C12">חשמל אמין</text>
+  <text x="130" y="428" textAnchor="middle" fontFamily="sans-serif" fontSize="10" fill="#FFFFFF" opacity="0.7">שירות 24/7 | רישיון מלא</text>
+
+  <!-- Glowing outlet on wall -->
+  <rect x="640" y="460" width="80" height="65" rx="6" fill="#34495E" stroke="#555555" strokeWidth="2"/>
+  <circle cx="660" cy="482" r="8" fill="none" stroke="#AAAAAA" strokeWidth="2"/>
+  <rect x="657" y="479" x2="657" y2="485" width="3" height="6" fill="#AAAAAA"/>
+  <rect x="663" y="479" width="3" height="6" fill="#AAAAAA"/>
+  <circle cx="700" cy="482" r="8" fill="none" stroke="#AAAAAA" strokeWidth="2"/>
+  <rect x="697" y="479" width="3" height="6" fill="#AAAAAA"/>
+  <rect x="703" y="479" width="3" height="6" fill="#AAAAAA"/>
+  <!-- Ground pin holes -->
+  <circle cx="660" cy="497" r="3" fill="#888888"/>
+  <circle cx="700" cy="497" r="3" fill="#888888"/>
+  <!-- Electric glow -->
+  <rect x="635" y="455" width="90" height="75" rx="8" fill="#F39C12" opacity="0.06"/>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Dark studio background -->
+  <rect width="800" height="600" fill="#1A1A2E"/>
+
+  <!-- Studio backdrop -->
+  <path d="M120 80 L120 520 Q400 540 680 520 L680 80 Z" fill="#16213E"/>
+  <path d="M120 80 Q400 50 680 80" fill="#0F3460" stroke="#0F3460" strokeWidth="2"/>
+
+  <!-- Studio lights (softboxes) -->
+  <!-- Left light -->
+  <rect x="40" y="80" width="60" height="80" rx="4" fill="#F5F5DC" opacity="0.9"/>
+  <rect x="50" y="90" width="40" height="60" rx="2" fill="#FFFFF0"/>
+  <rect x="55" y="95" width="30" height="50" rx="2" fill="#FFFFE8" opacity="0.8"/>
+  <!-- Light stand -->
+  <rect x="64" y="160" width="12" height="200" fill="#888888"/>
+  <rect x="40" y="358" width="60" height="8" rx="4" fill="#666666"/>
+  <!-- Light beam -->
+  <path d="M40 80 Q200 250 180 480" stroke="#FFFFF0" strokeWidth="1" opacity="0.15" fill="none"/>
+  <path d="M100 80 Q280 250 240 480" stroke="#FFFFF0" strokeWidth="1" opacity="0.1" fill="none"/>
+
+  <!-- Right light (hair light) -->
+  <rect x="700" y="120" width="50" height="65" rx="4" fill="#F5F5DC" opacity="0.9"/>
+  <rect x="706" y="126" width="38" height="53" rx="2" fill="#FFFFF0"/>
+  <!-- Stand -->
+  <rect x="719" y="185" width="10" height="180" fill="#888888"/>
+  <rect x="700" y="360" width="50" height="6" rx="3" fill="#666666"/>
+
+  <!-- Camera on tripod (foreground) -->
+  <!-- Tripod legs -->
+  <line x1="200" y1="520" x2="260" y2="380" stroke="#555555" strokeWidth="6" strokeLinecap="round"/>
+  <line x1="320" y1="520" x2="260" y2="380" stroke="#555555" strokeWidth="6" strokeLinecap="round"/>
+  <line x1="260" y1="540" x2="260" y2="380" stroke="#555555" strokeWidth="6" strokeLinecap="round"/>
+  <!-- Tripod head -->
+  <rect x="235" y="360" width="50" height="25" rx="4" fill="#333333"/>
+  <!-- Camera body -->
+  <rect x="215" y="305" width="90" height="60" rx="6" fill="#2C2C2C"/>
+  <rect x="220" y="310" width="80" height="50" rx="4" fill="#3A3A3A"/>
+  <!-- Lens -->
+  <circle cx="285" cy="335" r="26" fill="#1A1A1A"/>
+  <circle cx="285" cy="335" r="20" fill="#111111"/>
+  <circle cx="285" cy="335" r="14" fill="#0A0A0A"/>
+  <circle cx="285" cy="335" r="8" fill="#050505"/>
+  <!-- Lens reflections -->
+  <ellipse cx="279" cy="327" rx="5" ry="3" fill="#4A90D9" opacity="0.4" transform="rotate(-20 279 327)"/>
+  <ellipse cx="292" cy="341" rx="3" ry="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Viewfinder hump -->
+  <rect x="230" y="295" width="30" height="15" rx="4" fill="#2C2C2C"/>
+  <!-- Flash shoe -->
+  <rect x="240" y="290" width="25" height="6" rx="2" fill="#555555"/>
+  <!-- Camera strap -->
+  <path d="M215 315 Q190 305 185 285 Q180 265 205 260" stroke="#8B4513" strokeWidth="4" fill="none" strokeLinecap="round"/>
+
+  <!-- Subject being photographed - woman in elegant pose -->
+  <!-- Backdrop stand/roll in bg -->
+  <rect x="395" y="95" width="8" height="380" fill="#555555"/>
+  <rect x="585" y="95" width="8" height="380" fill="#555555"/>
+  <rect x="395" y="90" width="198" height="12" rx="6" fill="#444444"/>
+  <!-- Paper backdrop roll -->
+  <ellipse cx="494" cy="96" rx="99" ry="14" fill="#666666"/>
+
+  <!-- Subject -->
+  <!-- Elegant dress -->
+  <path d="M470 350 Q455 390 445 480 L555 480 Q545 390 530 350 Z" fill="#8B2252"/>
+  <path d="M455 480 Q500 500 545 480" stroke="#6B1A3A" strokeWidth="2" fill="none"/>
+  <!-- Body torso -->
+  <rect x="465" y="280" width="70" height="75" rx="8" fill="#8B2252"/>
+  <!-- Shoulders/neckline -->
+  <path d="M450 300 Q500 285 550 300 L545 280 L455 280 Z" fill="#7A1A48"/>
+  <!-- Head/face -->
+  <circle cx="500" cy="245" r="36" fill="#F0C090"/>
+  <!-- Hair -->
+  <path d="M466 230 Q478 200 500 198 Q522 200 534 230 Q540 255 530 275 Q515 285 500 280 Q485 285 470 275 Q460 255 466 230Z" fill="#3D2B1A"/>
+  <!-- Long flowing hair -->
+  <path d="M470 275 Q455 310 460 350" stroke="#3D2B1A" strokeWidth="12" fill="none" strokeLinecap="round"/>
+  <path d="M530 275 Q545 310 540 350" stroke="#3D2B1A" strokeWidth="12" fill="none" strokeLinecap="round"/>
+  <!-- Elegant pose - arm extended -->
+  <path d="M550 300 Q585 285 600 265" stroke="#F0C090" strokeWidth="20" strokeLinecap="round"/>
+  <path d="M450 300 Q430 330 425 360" stroke="#F0C090" strokeWidth="20" strokeLinecap="round"/>
+  <!-- Jewelry -->
+  <ellipse cx="500" cy="282" rx="22" ry="5" fill="none" stroke="#FFD700" strokeWidth="2"/>
+  <!-- Earrings -->
+  <circle cx="466" cy="252" r="4" fill="#FFD700"/>
+  <circle cx="534" cy="252" r="4" fill="#FFD700"/>
+
+  <!-- Flash effect -->
+  <circle cx="285" cy="335" r="60" fill="#FFFFFF" opacity="0.08"/>
+
+  <!-- Photographer (Ron) behind camera -->
+  <circle cx="175" cy="310" r="26" fill="#D4A574"/>
+  <!-- Hair -->
+  <path d="M151 302 Q158 280 175 278 Q192 280 199 302" fill="#2C1810"/>
+  <!-- Shirt -->
+  <rect x="152" y="336" width="46" height="60" rx="5" fill="#333366"/>
+  <!-- Eye at viewfinder -->
+  <circle cx="200" cy="316" r="5" fill="#555555"/>
+
+  <!-- Photos on wall / portfolio strip -->
+  <rect x="30" y="30" width="65" height="50" rx="3" fill="#FFFFFF" stroke="#DDDDDD" strokeWidth="1"/>
+  <rect x="34" y="34" width="57" height="42" rx="2" fill="#D4A574" opacity="0.6"/>
+  <rect x="105" y="30" width="65" height="50" rx="3" fill="#FFFFFF" stroke="#DDDDDD" strokeWidth="1"/>
+  <rect x="109" y="34" width="57" height="42" rx="2" fill="#87CEEB" opacity="0.6"/>
+  <rect x="180" y="30" width="65" height="50" rx="3" fill="#FFFFFF" stroke="#DDDDDD" strokeWidth="1"/>
+  <rect x="184" y="34" width="57" height="42" rx="2" fill="#98FB98" opacity="0.6"/>
+
+  <!-- Name/logo -->
+  <rect x="570" y="30" width="200" height="60" rx="8" fill="#FFFFFF" opacity="0.1"/>
+  <text x="670" y="58" textAnchor="middle" fontFamily="serif" fontSize="16" fill="#FFFFFF">רון צלמות</text>
+  <text x="670" y="78" textAnchor="middle" fontFamily="sans-serif" fontSize="10" fill="#AAAAAA">Photography Studio</text>
+</svg>

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F0F8FF"/>
+
+  <!-- Clean clinic room -->
+  <rect x="0" y="0" width="800" height="600" fill="#EAF4FC"/>
+  <!-- Wall tile pattern -->
+  <rect x="0" y="0" width="800" height="300" fill="#F5FBFF"/>
+
+  <!-- Dental chair -->
+  <!-- Base -->
+  <rect x="280" y="470" width="240" height="20" rx="8" fill="#B0BEC5"/>
+  <rect x="330" y="420" width="30" height="55" fill="#90A4AE"/>
+  <rect x="440" y="420" width="30" height="55" fill="#90A4AE"/>
+  <!-- Chair seat -->
+  <rect x="260" y="380" width="280" height="50" rx="10" fill="#ECEFF1"/>
+  <rect x="260" y="385" width="280" height="40" rx="8" fill="#FFFFFF"/>
+  <!-- Chair back -->
+  <rect x="270" y="250" width="260" height="135" rx="12" fill="#ECEFF1"/>
+  <rect x="275" y="255" width="250" height="125" rx="10" fill="#FFFFFF"/>
+  <!-- Headrest -->
+  <rect x="320" y="225" width="160" height="30" rx="10" fill="#ECEFF1"/>
+  <rect x="325" y="228" width="150" height="24" rx="8" fill="#FFFFFF"/>
+  <!-- Footrest -->
+  <rect x="260" y="425" width="100" height="18" rx="8" fill="#90A4AE"/>
+
+  <!-- Patient in chair -->
+  <!-- Body/gown -->
+  <rect x="295" y="285" width="210" height="145" rx="8" fill="#B3D9F7" opacity="0.8"/>
+  <!-- Patient head -->
+  <circle cx="400" cy="255" r="34" fill="#F5C5A3"/>
+  <!-- Hair -->
+  <path d="M368 240 Q378 215 400 218 Q422 215 432 240" fill="#8B5E3C"/>
+  <!-- Patient mouth open -->
+  <ellipse cx="400" cy="268" rx="16" ry="8" fill="#B0313A"/>
+  <!-- Teeth visible -->
+  <rect x="386" y="263" width="28" height="8" rx="3" fill="#FFFFFF"/>
+  <!-- Dental bib -->
+  <path d="M370 288 L430 288 L435 340 L365 340 Z" fill="#FFFFFF" stroke="#B3D9F7" strokeWidth="1"/>
+  <!-- Bib clip -->
+  <circle cx="400" cy="292" r="5" fill="#90A4AE"/>
+
+  <!-- Dentist (Dr. Sarah Levi) -->
+  <circle cx="180" cy="265" r="32" fill="#FDDCBA"/>
+  <!-- Doctor cap/hair -->
+  <path d="M150 255 Q155 232 180 230 Q205 232 210 255" fill="#3D2B1A"/>
+  <!-- Doctor coat -->
+  <rect x="152" y="297" width="56" height="90" rx="6" fill="#FFFFFF"/>
+  <!-- Blue scrubs underneath -->
+  <rect x="158" y="305" width="44" height="82" rx="4" fill="#B3D9F7"/>
+  <!-- Stethoscope -->
+  <path d="M172 315 Q160 335 165 350 Q170 362 178 360 Q186 358 188 350 Q192 338 180 325" stroke="#666666" strokeWidth="3" fill="none"/>
+  <!-- Mask on face -->
+  <rect x="162" y="268" rx="6" width="36" height="22" fill="#B3D9F7"/>
+  <!-- Doctor arm extended toward patient -->
+  <path d="M208 320 Q260 310 280 295" stroke="#FFFFFF" strokeWidth="18" strokeLinecap="round"/>
+  <path d="M208 320 Q260 310 280 295" stroke="#B3D9F7" strokeWidth="14" strokeLinecap="round"/>
+
+  <!-- Dental light -->
+  <rect x="460" y="100" width="8" height="140" rx="4" fill="#AAAAAA"/>
+  <rect x="464" y="100" width="100" height="8" rx="4" fill="#AAAAAA"/>
+  <rect x="558" y="100" width="8" height="80" rx="4" fill="#AAAAAA"/>
+  <!-- Light head -->
+  <ellipse cx="470" cy="245" rx="45" ry="18" fill="#DDDDDD"/>
+  <ellipse cx="470" cy="243" rx="38" ry="14" fill="#FFFFCC"/>
+  <!-- Light beam -->
+  <path d="M430 245 Q400 270 410 330 L530 330 Q540 270 510 245 Z" fill="#FFFFAA" opacity="0.25"/>
+
+  <!-- Dental tools tray -->
+  <rect x="540" y="350" width="180" height="90" rx="6" fill="#ECEFF1"/>
+  <rect x="548" y="358" width="164" height="74" rx="4" fill="#F5F5F5"/>
+  <!-- Tools -->
+  <!-- Mirror -->
+  <rect x="558" y="365" width="4" height="50" rx="2" fill="#AAAAAA"/>
+  <circle cx="560" cy="363" r="8" fill="#CCCCCC"/>
+  <circle cx="560" cy="363" r="5" fill="#EEEEEE"/>
+  <!-- Explorer -->
+  <rect x="574" y="365" width="4" height="50" rx="2" fill="#AAAAAA"/>
+  <path d="M576 365 Q582 358 588 365" stroke="#AAAAAA" strokeWidth="3" fill="none"/>
+  <!-- Scaler -->
+  <rect x="594" y="362" width="5" height="55" rx="2" fill="#BBBBBB"/>
+  <path d="M597 362 Q606 355 610 365" stroke="#BBBBBB" strokeWidth="2" fill="none"/>
+  <!-- Forceps -->
+  <rect x="615" y="362" width="4" height="55" rx="2" fill="#AAAAAA"/>
+  <rect x="612" y="360" width="10" height="4" rx="2" fill="#888888"/>
+
+  <!-- Tooth illustration (hero graphic) -->
+  <g transform="translate(630 100)">
+    <!-- Big friendly tooth -->
+    <path d="M60 0 C80 0 100 20 100 45 C100 65 95 85 90 110 C85 135 80 160 70 175 C65 182 58 185 50 185 C42 185 35 182 30 175 C20 160 15 135 10 110 C5 85 0 65 0 45 C0 20 20 0 40 0 C45 0 50 2 50 2 C50 2 55 0 60 0 Z" fill="#FFFFFF" stroke="#E0E0E0" strokeWidth="3"/>
+    <!-- Tooth shine -->
+    <path d="M20 30 Q35 20 50 28" stroke="#FFFFFF" strokeWidth="4" fill="none" strokeLinecap="round"/>
+    <ellipse cx="35" cy="40" rx="8" ry="5" fill="#FFFFFF" opacity="0.6" transform="rotate(-20 35 40)"/>
+    <!-- Tooth roots -->
+    <path d="M30 175 Q28 210 25 230" stroke="#FFB8A0" strokeWidth="6" strokeLinecap="round"/>
+    <path d="M50 185 Q50 220 50 240" stroke="#FFB8A0" strokeWidth="6" strokeLinecap="round"/>
+    <path d="M70 175 Q72 210 75 230" stroke="#FFB8A0" strokeWidth="6" strokeLinecap="round"/>
+    <!-- Smiley face on tooth -->
+    <circle cx="35" cy="80" r="6" fill="#AED6F1"/>
+    <circle cx="65" cy="80" r="6" fill="#AED6F1"/>
+    <path d="M30 105 Q50 120 70 105" stroke="#AED6F1" strokeWidth="4" fill="none" strokeLinecap="round"/>
+  </g>
+
+  <!-- Clinic sign -->
+  <rect x="30" y="30" width="300" height="60" rx="8" fill="#FFFFFF" stroke="#B3D9F7" strokeWidth="2"/>
+  <text x="180" y="58" textAnchor="middle" fontFamily="serif" fontSize="15" fill="#1565C0">ד״ר שרה לוי</text>
+  <text x="180" y="78" textAnchor="middle" fontFamily="sans-serif" fontSize="11" fill="#666666">מרפאת שיניים | רופאת שיניים מומחית</text>
+</svg>
