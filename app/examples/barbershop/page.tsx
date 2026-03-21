@@ -147,7 +147,7 @@ export default function BarbershopPremium() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
+            variants={fadeInUp as any}
             className="text-center mb-20"
           >
             <span className="text-[#d4a843] font-bold text-sm uppercase tracking-widest border border-[#d4a843]/30 rounded-full px-4 py-1.5 bg-[#d4a843]/10">מחירון פרימיום</span>
