@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Scissors, MapPin, Phone, Clock, Star, ChevronDown, CheckCircle2 } from "lucide-react";
 import { useRef } from "react";
-import Image from "next/image";
 
 export default function BarbershopPremium() {
   const { scrollYProgress } = useScroll();
