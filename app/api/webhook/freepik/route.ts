@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ received: true, status: 'success' });
-  } catch (error: any) {
+  } catch (error) {
     console.error('[Freepik Webhook] Error processing payload:', error.message);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
