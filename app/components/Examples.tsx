@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
+import Link from "next/link";
+
 const examples = [
   {
     slug: "restaurant",
@@ -136,38 +138,40 @@ export default function Examples() {
               className="group relative bg-[#0a1120] rounded-[2rem] overflow-hidden border border-white/5 hover:border-[#d4a843]/40 transition-all duration-500 shadow-2xl"
               style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="relative h-64 overflow-hidden">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
-                  style={{ backgroundImage: `url(${example.image})` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1120] via-[#0a1120]/60 to-transparent z-10" />
-                
-                {/* Floating Tag */}
-                <div className="absolute top-6 right-6 z-20 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full flex items-center gap-2">
-                  <span>{example.emoji}</span>
-                  <span className="text-white text-xs font-bold tracking-wide">{example.category}</span>
-                </div>
-              </div>
-
-              <div className="relative z-20 p-8 -mt-10">
-                <h3 className="text-2xl font-black text-white mb-3 group-hover:text-[#d4a843] transition-colors">
-                  {example.name}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-8">
-                  {example.description}
-                </p>
-
-                <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#d4a843]">
-                    קליק להדגמה
-                  </span>
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#d4a843] transition-colors duration-300">
-                    <ArrowLeft className="w-5 h-5 text-white group-hover:text-[#050B14] transition-colors" />
+              <Link href={`/examples/${example.slug}`} className="block h-full">
+                <div className="relative h-64 overflow-hidden">
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10" />
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
+                    style={{ backgroundImage: `url(${example.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1120] via-[#0a1120]/60 to-transparent z-10" />
+                  
+                  {/* Floating Tag */}
+                  <div className="absolute top-6 right-6 z-20 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full flex items-center gap-2">
+                    <span>{example.emoji}</span>
+                    <span className="text-white text-xs font-bold tracking-wide">{example.category}</span>
                   </div>
                 </div>
-              </div>
+
+                <div className="relative z-20 p-8 -mt-10">
+                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-[#d4a843] transition-colors">
+                    {example.name}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed mb-8">
+                    {example.description}
+                  </p>
+
+                  <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#d4a843]">
+                      קליק להדגמה
+                    </span>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#d4a843] transition-colors duration-300">
+                      <ArrowLeft className="w-5 h-5 text-white group-hover:text-[#050B14] transition-colors" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
