@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Scissors, MapPin, Phone, Clock, Star, ChevronDown, CheckCircle2 } from "lucide-react";
-import { useRef } from "react";
+import { Scissors, MapPin, Phone, ChevronDown, CheckCircle2 } from "lucide-react";
 
 export default function BarbershopPremium() {
   const { scrollYProgress } = useScroll();
