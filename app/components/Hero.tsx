@@ -16,45 +16,18 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050B14]">
-      {/* Dynamic 3D Animated Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.5, 1],
-            rotate: [0, -90, 0],
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] rounded-full bg-[#d4a843]/20 blur-[150px]"
-        />
-        <motion.div
-          animate={{
-            y: [0, -50, 0],
-            opacity: [0.1, 0.3, 0.1],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[20%] right-[30%] w-[400px] h-[400px] rounded-full bg-purple-600/20 blur-[100px]"
-        />
-        
-        {/* Animated Perspective Grid */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
-            transform: "perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px)",
-            transformOrigin: "top text-center"
-          }}
-        />
+      {/* Freepik AI Video Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+         <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2 opacity-60 mix-blend-lighten"
+            src="https://cdn.pixabay.com/video/2018/11/02/19056-298336214_tiny.mp4"
+         />
+         {/* Webhook AI Video instruction: Once Kling API generates the MP4, replace the src above with your Freepik Video URL. */}
+         <div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-[#050B14]/40 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">

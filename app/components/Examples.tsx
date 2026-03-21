@@ -7,6 +7,26 @@ import Link from "next/link";
 
 const examples = [
   {
+    slug: "stitch-ai",
+    name: "Stitch AI Workspace",
+    category: "AI",
+    description: "Vite React app mimicking an advanced AI design generator with glassmorphism.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    color: "from-fuchsia-500 to-cyan-500",
+    emoji: "✨",
+    url: "https://stitch-site-delta.vercel.app"
+  },
+  {
+    slug: "spline-3d",
+    name: "Spline Interactive 3D",
+    category: "3D Web",
+    description: "Immersive 3D interactive hero section combined with a stunning dark-mode layout.",
+    image: "https://images.unsplash.com/photo-1614729939124-03290b5609ce?auto=format&fit=crop&w=800&q=80",
+    color: "from-blue-600 to-indigo-900",
+    emoji: "🧊",
+    url: "https://spline-site-beta.vercel.app"
+  },
+  {
     slug: "restaurant",
     name: "מסעדת גורמה",
     category: "מסעדה",
@@ -126,7 +146,7 @@ export default function Examples() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-14">
           {examples.map((example, index) => (
             <motion.div
               key={index}
@@ -134,43 +154,54 @@ export default function Examples() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative bg-[#0a1120] rounded-[2rem] overflow-hidden border border-white/5 hover:border-[#d4a843]/40 transition-all duration-500 shadow-2xl"
-              style={{ transformStyle: "preserve-3d" }}
+              whileHover={{ y: -15, scale: 1.05, rotateX: 5, rotateY: 5 }}
+              className="group relative rounded-[2rem] overflow-hidden backdrop-blur-3xl bg-white/[0.02] border border-white/10 hover:border-[#d4a843]/60 transition-all duration-700 shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_60px_rgba(212,168,67,0.2)]"
+              style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
             >
-              <Link href={`/examples/${example.slug}`} className="block h-full">
-                <div className="relative h-64 overflow-hidden">
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10" />
+              <Link 
+                 href={example.url || `/examples/${example.slug}`} 
+                 target={example.url ? "_blank" : undefined}
+                 rel={example.url ? "noopener noreferrer" : undefined}
+                 className="block h-full relative z-10"
+              >
+                <div className="relative h-72 overflow-hidden m-4 rounded-[1.5rem]">
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10" />
                   <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group-hover:scale-110 group-hover:rotate-1"
                     style={{ backgroundImage: `url(${example.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1120] via-[#0a1120]/60 to-transparent z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#02050A] via-[#02050A]/20 to-transparent z-10 opacity-80" />
                   
-                  {/* Floating Tag */}
-                  <div className="absolute top-6 right-6 z-20 bg-black/50 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full flex items-center gap-2">
-                    <span>{example.emoji}</span>
-                    <span className="text-white text-xs font-bold tracking-wide">{example.category}</span>
+                  {/* Glowing Tag */}
+                  <div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-xl border border-white/20 px-5 py-2 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    <span className="text-xl">{example.emoji}</span>
+                    <span className="text-white text-sm font-extrabold tracking-widest">{example.category}</span>
                   </div>
                 </div>
 
-                <div className="relative z-20 p-8 -mt-10">
-                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-[#d4a843] transition-colors">
-                    {example.name}
-                  </h3>
-                  <p className="text-white/60 text-sm leading-relaxed mb-8">
+                <div className="relative z-20 p-8 pt-2">
+                  <div className="flex items-center gap-4 mb-4">
+                     <div className="h-[2px] w-8 bg-[#d4a843] rounded-full" />
+                     <h3 className="text-3xl font-black text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#d4a843] group-hover:to-[#fceab8] transition-all duration-500">
+                       {example.name}
+                     </h3>
+                  </div>
+                  <p className="text-white/70 text-base leading-relaxed mb-8 font-light">
                     {example.description}
                   </p>
 
-                  <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#d4a843]">
-                      קליק להדגמה
+                  <div className="pt-6 flex items-center justify-between border-t border-white/10">
+                    <span className="text-sm font-black uppercase tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white group-hover:from-[#d4a843] group-hover:to-[#e6bc57] transition-all duration-300">
+                      צפה בפרויקט
                     </span>
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#d4a843] transition-colors duration-300">
-                      <ArrowLeft className="w-5 h-5 text-white group-hover:text-[#050B14] transition-colors" />
+                    <div className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:bg-[#d4a843] group-hover:border-[#d4a843] group-hover:scale-110 transition-all duration-500 shadow-lg">
+                      <ArrowLeft className="w-6 h-6 text-white group-hover:text-[#050B14] transition-colors" />
                     </div>
                   </div>
                 </div>
+                
+                {/* Glow Effect behind card content */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#d4a843]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               </Link>
             </motion.div>
           ))}
