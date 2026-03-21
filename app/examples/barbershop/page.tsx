@@ -62,7 +62,7 @@ export default function BarbershopPremium() {
           <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent z-10" />
           <video 
-            src="/hero-edited.mp4" 
+            src="/hero-barbershop.mp4" 
             autoPlay 
             loop 
             muted 

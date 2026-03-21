@@ -19,6 +19,7 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -26,6 +27,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
+.env.*
 .env*.local
 
 # vercel
@@ -34,3 +37,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# --- AI video generation scripts (contain API keys) ---
+generate_hero_video.mjs
+download_hero_video.mjs
+download_and_render.mjs
+auto_deploy_haircut.mjs
+test-ai-video.mjs
+poll_task.mjs
+endpoints_results.json
+
+# --- Sub-project build artifacts ---
+spline-site/node_modules/
+spline-site/.vercel/
+stitch-site/node_modules/
+stitch-site/.vercel/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
