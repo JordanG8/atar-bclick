@@ -11,13 +11,6 @@ export default function BarbershopPremium() {
     document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 40 },
