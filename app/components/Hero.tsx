@@ -4,14 +4,14 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { ArrowLeft, CheckCircle2, ChevronDown } from "lucide-react";
 import dynamic from "next/dynamic";
 
-const SplineScene = dynamic(() => import("./SplineScene"), {
+const ThreeScene = dynamic(() => import("./ThreeScene"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
       <div className="relative w-48 h-48">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-pulse" />
-        <div className="absolute inset-4 rounded-full border border-white/10 animate-[spin_8s_linear_infinite]" />
-        <div className="absolute inset-10 rounded-full border border-white/5 animate-[spin_12s_linear_infinite_reverse]" />
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#d4a843]/10 via-[#1e3a8a]/10 to-[#d4a843]/10 animate-pulse" />
+        <div className="absolute inset-4 rounded-full border border-[#d4a843]/20 animate-[spin_8s_linear_infinite]" />
+        <div className="absolute inset-10 rounded-full border border-[#1e3a8a]/15 animate-[spin_12s_linear_infinite_reverse]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-white/20 text-xs font-medium tracking-widest uppercase">Loading 3D</span>
         </div>
@@ -233,7 +233,7 @@ export default function Hero() {
               <div className="absolute inset-0 -m-4 rounded-3xl border border-white/[0.03] pointer-events-none" />
 
               <div className="w-full h-full relative z-10 rounded-3xl overflow-hidden">
-                <SplineScene />
+                <ThreeScene />
               </div>
 
               {/* Floating decorative label */}
