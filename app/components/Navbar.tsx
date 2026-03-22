@@ -18,7 +18,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <span className="text-2xl font-black text-white">אתר</span>
-            <span className="text-2xl font-black text-[#d4a843]">בקליק</span>
+            <span className="text-2xl font-black text-[#8b5cf6]">בקליק</span>
           </div>
 
           {/* Desktop Nav */}
@@ -37,13 +37,13 @@ export default function Navbar() {
             </button>
             <Link
               href="/gallery"
-              className="text-white/80 hover:text-[#d4a843] transition-colors text-sm font-medium"
+              className="text-white/80 hover:text-[#8b5cf6] transition-colors text-sm font-medium"
             >
               גלריה
             </Link>
             <button
               onClick={() => scrollTo("contact")}
-              className="bg-[#d4a843] hover:bg-[#f0c866] text-[#0f1e4a] font-bold px-5 py-2 rounded-full transition-all duration-200 text-sm"
+              className="bg-[#8b5cf6] hover:bg-[#3b82f6] text-[#0f1e4a] font-bold px-5 py-2 rounded-full transition-all duration-200 text-sm"
             >
               רוצה אתר?
             </button>
@@ -83,13 +83,13 @@ export default function Navbar() {
           ))}
           <Link
             href="/gallery"
-            className="block w-full text-right text-[#d4a843] hover:text-[#f0c866] py-2 text-base font-medium"
+            className="block w-full text-right text-[#8b5cf6] hover:text-[#3b82f6] py-2 text-base font-medium"
           >
             גלריה
           </Link>
           <button
             onClick={() => scrollTo("contact")}
-            className="block w-full text-center bg-[#d4a843] hover:bg-[#f0c866] text-[#0f1e4a] font-bold px-5 py-2.5 rounded-full transition-all duration-200 mt-2"
+            className="block w-full text-center bg-[#8b5cf6] hover:bg-[#3b82f6] text-[#0f1e4a] font-bold px-5 py-2.5 rounded-full transition-all duration-200 mt-2"
           >
             רוצה אתר?
           </button>

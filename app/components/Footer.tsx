@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <span className="text-2xl font-black text-white">אתר</span>
-            <span className="text-2xl font-black text-[#d4a843]">בקליק</span>
+            <span className="text-2xl font-black text-[#8b5cf6]">בקליק</span>
           </div>
 
           {/* Quick links */}

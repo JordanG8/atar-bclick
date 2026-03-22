@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+
 export default function Pricing() {
   const scrollToContact = () => {
     const el = document.getElementById("contact");
@@ -7,98 +10,114 @@ export default function Pricing() {
   };
 
   const features = [
-    "דף נחיתה מקצועי ומרשים",
-    "עיצוב מותאם לעסק שלך",
-    "גרסה מלאה למובייל",
-    "מהיר וטעינה מהירה",
-    "SSL מאובטח",
+    "דף נחיתה מקצועי ומרשים מתמיד",
+    "עיצוב פרימיום מותאם לעסק שלך",
+    "חווית מובייל עוצרת נשימה",
+    "אנימציות תלת ממד מתקדמות",
+    "SSL ואבטחת מידע",
     "אחסון ודומיין לשנה הראשונה",
-    "תמיכה ב-RTL עברית",
-    "שינויים ותיקונים ללא הגבלה",
+    "תמיכה מלאה ב-RTL (עברית)",
+    "זמינות לשינויים ללא הגבלה במעמד המסירה",
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <span className="inline-block bg-yellow-50 text-yellow-700 font-bold text-sm px-4 py-2 rounded-full mb-4">
-            מחיר שקוף
+    <section id="pricing" className="py-32 bg-[#02050A] relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#8b5cf6]/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block bg-[#8b5cf6]/10 border border-[#8b5cf6]/30 text-[#8b5cf6] font-bold text-sm px-6 py-2 rounded-full mb-6 uppercase tracking-wider">
+            השקעה חכמה
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#0f1e4a] mb-4">
-            מחיר אחד, ללא הפתעות
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight">
+            חבילת ה-Premium
           </h2>
-          <p className="text-xl text-gray-600 max-w-xl mx-auto">
-            אין תשלומים חוזרים, אין עלויות נסתרות — מחיר קבוע ובהיר
+          <p className="text-xl text-white/60 max-w-xl mx-auto font-light">
+            הכל כלול, במחיר אחד ברור והוגן ללא עמלות נסתרות
           </p>
-        </div>
+        </motion.div>
 
         <div className="max-w-2xl mx-auto">
-          {/* Main pricing card */}
-          <div className="relative bg-[#0f1e4a] rounded-3xl p-8 sm:p-12 shadow-2xl overflow-hidden">
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4a843]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+          {/* Main Pricing Card */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8, boxShadow: "0 25px 60px rgba(212,168,67,0.15)" }}
+            transition={{ duration: 0.5 }}
+            className="relative liquid-glass rounded-[2.5rem] p-10 sm:p-14 overflow-hidden border border-white/10"
+          >
+            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#8b5cf6] via-[#06b6d4] to-[#8b5cf6] opacity-80" />
 
-            <div className="relative z-10">
-              {/* Badge */}
-              <div className="flex justify-center mb-6">
-                <span className="bg-[#d4a843]/20 border border-[#d4a843]/30 text-[#f0c866] text-sm font-bold px-4 py-2 rounded-full">
-                  הכי פופולרי
-                </span>
-              </div>
-
-              {/* Price */}
-              <div className="text-center mb-8">
-                <p className="text-white/60 text-lg mb-2">דף נחיתה מקצועי</p>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-7xl font-black text-[#d4a843]">₪500</span>
-                </div>
-                <p className="text-white/50 text-sm mt-2">תשלום חד-פעמי · אין דמי מנוי</p>
-              </div>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-                {features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#d4a843] flex items-center justify-center flex-shrink-0">
-                      <svg viewBox="0 0 12 12" className="w-3 h-3 fill-[#0f1e4a]">
-                        <path d="M10 3L5 8.5 2 5.5 1 6.5 5 10.5 11 4z" />
-                      </svg>
-                    </div>
-                    <span className="text-white/85 text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-[#d4a843] hover:bg-[#f0c866] text-[#0f1e4a] font-black text-xl py-4 rounded-2xl transition-all duration-300 hover:scale-[1.02] shadow-lg"
-              >
-                רוצה אתר? לחץ כאן
-              </button>
-
-              {/* Payment info */}
-              <p className="text-center text-white/40 text-sm mt-4">
-                תשלום דרך Bit לנייד 054-352-3776
-              </p>
+            {/* Badge */}
+            <div className="flex justify-center mb-10">
+              <span className="bg-[#8b5cf6] text-[#050B14] shadow-[0_0_20px_rgba(212,168,67,0.4)] text-sm font-black uppercase tracking-widest px-6 py-2 rounded-full">
+                הבחירה המובילה
+              </span>
             </div>
-          </div>
+
+            {/* Price */}
+            <div className="text-center mb-12 relative">
+              <div className="absolute inset-0 bg-[#8b5cf6] opacity-5 blur-[60px] rounded-full" />
+              <p className="text-white/40 text-sm font-semibold tracking-widest uppercase mb-4">דף נחיתה מושלם החל מ</p>
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 drop-shadow-sm">500</span>
+                <span className="text-4xl font-bold text-[#8b5cf6]">₪</span>
+              </div>
+              <p className="text-[#8b5cf6]/80 text-sm mt-4 font-medium tracking-wide">תשלום פעם אחת · בעלות מלאה שלך</p>
+            </div>
+
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6 mb-12">
+              {features.map((feature, i) => (
+                <div key={i} className="flex items-center gap-4 group">
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#8b5cf6]/20 group-hover:border-[#8b5cf6]/50 transition-colors">
+                    <Check className="w-3.5 h-3.5 text-[#8b5cf6]" />
+                  </div>
+                  <span className="text-white/80 text-sm font-light leading-snug">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <motion.button
+              onClick={scrollToContact}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] text-[#02050A] font-black text-xl py-5 rounded-2xl shadow-[0_10px_30px_rgba(212,168,67,0.3)] hover:shadow-[0_15px_40px_rgba(212,168,67,0.5)] transition-shadow"
+            >
+              התחל פרויקט עכשיו
+            </motion.button>
+          </motion.div>
 
           {/* Trust badges */}
-          <div className="grid grid-cols-3 gap-4 mt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="grid grid-cols-3 gap-6 mt-12"
+          >
             {[
-              { icon: "🔒", text: "תשלום מאובטח" },
-              { icon: "⚡", text: "מוכן תוך 24ש׳" },
-              { icon: "💯", text: "שביעות רצון" },
+              { icon: "🔒", text: "תשלום בטוח" },
+              { icon: "⚡", text: "אספקה ב-24 ש׳" },
+              { icon: "👑", text: "איכות פרימיום" },
             ].map((badge, i) => (
-              <div key={i} className="text-center bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                <div className="text-2xl mb-1">{badge.icon}</div>
-                <div className="text-xs font-semibold text-gray-600">{badge.text}</div>
+              <div key={i} className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/5 hover:bg-white/10 transition-colors">
+                <div className="text-2xl mb-2 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">{badge.icon}</div>
+                <div className="text-xs font-semibold tracking-wider text-white/50">{badge.text}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

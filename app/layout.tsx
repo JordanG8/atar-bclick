@@ -1,61 +1,49 @@
 import type { Metadata } from "next";
-import { Heebo } from "next/font/google";
+import { Bodoni_Moda, Syne } from "next/font/google";
 import "./globals.css";
 
-const heebo = Heebo({
-  subsets: ["hebrew", "latin"],
-  variable: "--font-heebo",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+const bodoni = Bodoni_Moda({
+  subsets: ["latin"],
+  variable: "--font-bodoni",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atar-bclick.vercel.app"),
-  title: {
-    default: 'אתר בקליק | אתר אינטרנט מקצועי ב-500 ש"ח',
-    template: '%s | אתר בקליק',
-  },
+  metadataBase: new URL("https://jordangoren.com"),
+  title: "Jordan Goren — AI & Creative Technology",
   description:
-    'אתר אינטרנט מקצועי לעסקים קטנים בישראל — דפי נחיתה מעוצבים, מותאמים לנייד ומוכנים תוך 48 שעות. מחיר קבוע ₪500 בלבד. בנוי עם בינה מלאכותית.',
+    "Personal portfolio of Jordan Goren. Building at the intersection of artificial intelligence, design, and technology.",
   keywords: [
-    "אתר אינטרנט",
-    "דף נחיתה",
-    "עסקים קטנים",
-    "ישראל",
-    "אתר בקליק",
-    "אתר לעסק",
-    "בניית אתרים",
-    "דפי נחיתה בעברית",
-    "אתר זול",
-    "אתר מקצועי",
+    "Jordan Goren",
+    "AI",
+    "creative technology",
+    "portfolio",
+    "design",
+    "developer",
   ],
-  authors: [{ name: "אתר בקליק" }],
-  creator: "אתר בקליק",
-  publisher: "אתר בקליק",
-  alternates: {
-    canonical: "https://atar-bclick.vercel.app",
-  },
+  authors: [{ name: "Jordan Goren" }],
+  creator: "Jordan Goren",
   openGraph: {
     type: "website",
-    locale: "he_IL",
-    url: "https://atar-bclick.vercel.app",
-    siteName: "אתר בקליק",
-    title: 'אתר בקליק | אתר אינטרנט מקצועי ב-500 ש"ח',
+    locale: "en_US",
+    url: "https://jordangoren.com",
+    siteName: "Jordan Goren",
+    title: "Jordan Goren — AI & Creative Technology",
     description:
-      'אתר אינטרנט מקצועי לעסקים קטנים בישראל — דפי נחיתה מעוצבים, מותאמים לנייד ומוכנים תוך 48 שעות. מחיר קבוע ₪500 בלבד.',
+      "Building at the intersection of artificial intelligence, design, and technology.",
   },
   twitter: {
     card: "summary_large_image",
-    title: 'אתר בקליק | אתר אינטרנט מקצועי ב-500 ש"ח',
+    title: "Jordan Goren — AI & Creative Technology",
     description:
-      'דפי נחיתה מקצועיים לעסקים קטנים בישראל. ₪500 בלבד, תוך 48 שעות.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+      "Building at the intersection of artificial intelligence, design, and technology.",
   },
 };
 
@@ -65,8 +53,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="he" dir="rtl">
-      <body className={`${heebo.variable} font-sans antialiased`}>
+    <html lang="en">
+      <body
+        className={`${bodoni.variable} ${syne.variable} antialiased bg-primary text-cream`}
+      >
         {children}
       </body>
     </html>

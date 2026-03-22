@@ -9,8 +9,8 @@ const ThreeScene = dynamic(() => import("./ThreeScene"), {
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
       <div className="relative w-48 h-48">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#d4a843]/10 via-[#1e3a8a]/10 to-[#d4a843]/10 animate-pulse" />
-        <div className="absolute inset-4 rounded-full border border-[#d4a843]/20 animate-[spin_8s_linear_infinite]" />
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8b5cf6]/10 via-[#1e3a8a]/10 to-[#8b5cf6]/10 animate-pulse" />
+        <div className="absolute inset-4 rounded-full border border-[#8b5cf6]/20 animate-[spin_8s_linear_infinite]" />
         <div className="absolute inset-10 rounded-full border border-[#1e3a8a]/15 animate-[spin_12s_linear_infinite_reverse]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-white/20 text-xs font-medium tracking-widest uppercase">Loading 3D</span>
@@ -61,10 +61,12 @@ export default function Hero() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const rotateX = useSpring(useTransform(mouseY, [-300, 300], [4, -4]), {
     stiffness: 150,
     damping: 30,
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const rotateY = useSpring(useTransform(mouseX, [-300, 300], [-4, 4]), {
     stiffness: 150,
     damping: 30,
@@ -112,13 +114,17 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#050B14]/30 to-[#050B14]/80" />
         </div>
 
-        {/* ── Main Content Grid: Asymmetric Split ── */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 pb-16 w-full">
+        {/* ── Main Content Grid ── */}
+        <div className="absolute inset-0 w-full h-full z-[1]">
+        	<ThreeScene />
+        </div>
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 pb-16 w-full pointer-events-none">
+          {/* We add pointer-events-none to the wrapper and auto to the interactive elements */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center min-h-[70dvh]">
 
-            {/* ── Right Side: Text Content (RTL primary) ── */}
+            {/* ── Main Text Content (RTL primary) ── */}
             <motion.div
-              className="lg:col-span-6 xl:col-span-5 flex flex-col"
+              className="lg:col-span-12 xl:col-span-10 flex flex-col items-center text-center lg:items-start lg:text-right pointer-events-auto mx-auto lg:mx-0"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -126,7 +132,7 @@ export default function Hero() {
               {/* Liquid Glass Badge */}
               <motion.div variants={itemVariants}>
                 <div className="liquid-glass inline-flex items-center gap-3 rounded-full px-5 py-2.5 mb-8 w-max">
-                  <span className="w-2 h-2 rounded-full bg-[#d4a843] animate-pulse shadow-[0_0_8px_rgba(212,168,67,0.6)]" />
+                  <span className="w-2 h-2 rounded-full bg-[#8b5cf6] animate-pulse shadow-[0_0_8px_rgba(139,92,246,0.6)]" />
                   <span className="text-white/90 text-sm font-semibold tracking-wide">
                     עיצוב פרימיום · ביצוע מדויק · מוכן תוך 24 שעות
                   </span>
@@ -141,7 +147,7 @@ export default function Hero() {
                 <span className="text-white">הנוכחות הדיגיטלית</span>
                 <br />
                 <span className="text-white">שלך, </span>
-                <span className="bg-gradient-to-r from-[#d4a843] via-[#fceab8] to-[#d4a843] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(212,168,67,0.3)]">
+                <span className="bg-gradient-to-r from-[#8b5cf6] via-[#06b6d4] to-[#3b82f6] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(139,92,246,0.3)]">
                   ברמה אחרת
                 </span>
               </motion.h1>
@@ -149,24 +155,24 @@ export default function Hero() {
               {/* Subheading */}
               <motion.p
                 variants={itemVariants}
-                className="text-lg sm:text-xl text-white/60 mb-10 max-w-lg leading-relaxed font-light"
+                className="text-lg sm:text-xl text-white/60 mb-10 max-w-lg leading-relaxed font-light mx-auto lg:mx-0"
               >
                 אנו יוצרים דפי נחיתה מרהיבים עם אלמנטים תלת-ממדיים אינטראקטיביים,
                 וידאו AI וחוויית משתמש שמותירה רושם.
-                החל מ-<span className="text-[#f0c866] font-bold">₪500</span> בלבד.
+                החל מ-<span className="text-[#06b6d4] font-bold">₪500</span> בלבד.
               </motion.p>
 
               {/* CTA Buttons */}
               <motion.div
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-4 mb-14"
+                className="flex flex-col sm:flex-row gap-4 mb-14 mx-auto lg:mx-0"
               >
                 <motion.button
                   onClick={scrollToContact}
-                  whileHover={{ scale: 1.03, boxShadow: "0 0 60px rgba(212,168,67,0.5)" }}
+                  whileHover={{ scale: 1.03, boxShadow: "0 0 60px rgba(139,92,246,0.5)" }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                  className="group relative overflow-hidden bg-gradient-to-r from-[#d4a843] to-[#e6bc57] text-[#050B14] font-black text-lg px-10 py-5 rounded-2xl shadow-[0_0_40px_rgba(212,168,67,0.3)] flex items-center justify-center gap-3"
+                  className="group relative overflow-hidden bg-gradient-to-r from-[#8b5cf6] to-[#3b82f6] text-white font-black text-lg px-10 py-5 rounded-2xl shadow-[0_0_40px_rgba(139,92,246,0.3)] flex items-center justify-center gap-3"
                 >
                   <span className="relative z-10">התחל עכשיו</span>
                   <ArrowLeft className="w-5 h-5 relative z-10 group-hover:-translate-x-2 transition-transform duration-300" />
@@ -203,7 +209,7 @@ export default function Hero() {
                     }}
                     className="liquid-glass rounded-2xl p-4 text-center group cursor-default"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[#d4a843] mx-auto mb-2 opacity-80 group-hover:scale-125 transition-transform duration-300" />
+                    <CheckCircle2 className="w-5 h-5 text-[#8b5cf6] mx-auto mb-2 opacity-80 group-hover:scale-125 transition-transform duration-300" />
                     <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                       {stat.value}
                     </div>
@@ -212,37 +218,6 @@ export default function Hero() {
                     </div>
                   </motion.div>
                 ))}
-              </motion.div>
-            </motion.div>
-
-            {/* ── Left Side: 3D Spline Scene (RTL secondary) ── */}
-            <motion.div
-              className="lg:col-span-6 xl:col-span-7 relative h-[400px] sm:h-[500px] lg:h-[650px]"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              style={{
-                rotateX,
-                rotateY,
-                transformStyle: "preserve-3d",
-                perspective: 1200,
-              }}
-            >
-              {/* Glow ring behind the 3D scene */}
-              <div className="absolute inset-0 -m-8 rounded-full bg-[#d4a843]/5 blur-[80px] pointer-events-none" />
-              <div className="absolute inset-0 -m-4 rounded-3xl border border-white/[0.03] pointer-events-none" />
-
-              <div className="w-full h-full relative z-10 rounded-3xl overflow-hidden">
-                <ThreeScene />
-              </div>
-
-              {/* Floating decorative label */}
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-2 left-1/2 -translate-x-1/2 liquid-glass rounded-full px-4 py-2 text-xs text-white/60 font-medium tracking-wider uppercase z-20 whitespace-nowrap"
-              >
-                Interactive 3D — Drag to Explore
               </motion.div>
             </motion.div>
           </div>
@@ -268,7 +243,7 @@ export default function Hero() {
               className="text-white/30 text-sm font-bold uppercase tracking-widest flex items-center gap-4"
             >
               {item}
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d4a843]/40 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]/50 shrink-0" />
             </span>
           ))}
         </div>
