@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 right-0 left-0 z-50 bg-[#0f1e4a]/95 backdrop-blur-sm border-b border-white/10">
+    <nav className="fixed top-0 right-0 left-0 z-50 bg-[#050B14]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -85,7 +85,7 @@ export default function Navbar() {
             href="/gallery"
             className="block w-full text-right text-[#d4a843] hover:text-[#f0c866] py-2 text-base font-medium"
           >
-            גלריה ✨
+            גלריה
           </Link>
           <button
             onClick={() => scrollTo("contact")}
